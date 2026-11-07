@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+  <!-- AppLovin Axon Pixel -->
+  <script>
+    var AXON_EVENT_KEY = "13776d7c-9269-49f5-9633-403870c4ea7d";
+    !function(e,r){if(!e.axon){var a=e.axon=function(){a.performOperation?a.performOperation.apply(a,arguments):a.operationQueue.push(arguments)};a.operationQueue=[],a.ts=(new Date).getTime(),a.eventKey=AXON_EVENT_KEY;var t=r.createElement("script");t.async=!0,t.src="https://s.axon.ai/pixel.js";var o=r.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}}(window,document);
+    axon("init");
+    axon("track", "page_view");
+  </script>
+  <!-- End AppLovin Axon Pixel -->
+
+  <!-- AppLovin Axon — eventos de TESTE/validacao: SO disparam com ?axon_test=1 na URL.
+       Nunca disparam para visitantes normais. Usado apenas para validar o pixel no painel. -->
+  <script>
+    (function () {
+      try {
+        if (new URLSearchParams(window.location.search).get("axon_test") !== "1") return;
+        if (typeof axon !== "function") return;
+        var items = [{
+          item_id: "maxvitalize-6",
+          item_name: "MaxVitalize - 6 Bottles",
+          item_category_id: 1,
+          price: 49,
+          quantity: 6
+        }];
+        axon("track", "view_item",      { currency: "USD", value: 294, items: items });
+        axon("track", "add_to_cart",    { currency: "USD", value: 294, items: items });
+        axon("track", "begin_checkout", { currency: "USD", value: 294, items: items });
+        axon("track", "purchase", {
+          currency: "USD",
+          value: 294,
+          shipping: 0,
+          tax: 0,
+          transaction_id: "TEST-" + Date.now(),
+          items: items,
+          user_data: { email: "teste@exemplo.com" }
+        });
+      } catch (e) {}
+    })();
+  </script>
+
+  <title>Facebook - Kevin Costner</title>
+  <link rel="icon" href="images/5610944-150x150.png" sizes="32x32" />
+  <link rel="icon" href="images/5610944-300x300.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="images/5610944-300x300.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Poppins', 'sans-serif'],
+          },
+          colors: {
+            fb: {
+              blue: '#1877F2',
+              bg: '#F0F2F5',
+              border: '#CED0D4',
+              text: '#050505',
+              muted: '#65676B',
+              hover: '#E7F3FF',
+            },
+            brand: {
+              gold: '#D4A017',
+              goldLight: '#F5D76E',
+              green: '#22C55E',
+              greenDark: '#16A34A',
+              red: '#EF4444',
+              orange: '#F97316',
+            }
+          },
+          keyframes: {
+            pulse_cta: {
+              '0%, 100%': { transform: 'scale(1)', boxShadow: '0 0 0 0 rgba(34,197,94,0.5)' },
+              '50%': { transform: 'scale(1.04)', boxShadow: '0 0 0 12px rgba(34,197,94,0)' },
+            },
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            shimmer: {
+              '0%': { backgroundPosition: '-200% center' },
+              '100%': { backgroundPosition: '200% center' },
+            }
+          },
+          animation: {
+            pulse_cta: 'pulse_cta 2s ease-in-out infinite',
+            fadeInUp: 'fadeInUp 0.5s ease-out both',
+            shimmer: 'shimmer 2.5s linear infinite',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Vturb preloads -->
+  <script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
+  <link rel="preload" href="https://scripts.converteai.net/141b8f7c-149b-49a7-802c-7ac5af1c8eb5/players/6aef879bbc640f7b91af2222/v4/player.js" as="script">
+  <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
+  <link rel="dns-prefetch" href="https://cdn.converteai.net">
+  <link rel="dns-prefetch" href="https://scripts.converteai.net">
+  <link rel="dns-prefetch" href="https://images.converteai.net">
+  <link rel="dns-prefetch" href="https://api.vturb.com.br">
+
+  <!-- Estilos customizados inline -->
+  <style>
+    .esconder { display: none; }
+
+    /* CTA pulse animation */
+    .cta-pulse {
+      animation: pulse_cta 2s ease-in-out infinite;
+    }
+    @keyframes pulse_cta {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34,197,94,0.5); }
+      50%       { transform: scale(1.04); box-shadow: 0 0 0 12px rgba(34,197,94,0); }
+    }
+
+    /* Shimmer badge */
+    .shimmer-text {
+      background: linear-gradient(90deg, #D4A017 25%, #F5D76E 50%, #D4A017 75%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 2.5s linear infinite;
+    }
+    @keyframes shimmer {
+      0%   { background-position: -200% center; }
+      100% { background-position:  200% center; }
+    }
+
+    /* Fade-in para o reveal do bloco esconder */
+    .esconder-revealed {
+      animation: fadeInUp 0.6s ease-out both;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+
+</head>
+<body class="bg-fb-bg font-sans text-fb-text antialiased">
+
+  <!-- ══════════════════════════════════════════
+       FACEBOOK TOPBAR
+  ══════════════════════════════════════════ -->
+  <header class="bg-white shadow-sm">
+    <div class="max-w-[680px] mx-auto px-4 py-2 flex items-center justify-between">
+      <img src="images/facebook-logo.png" alt="Facebook" class="h-9 w-auto object-contain" />
+      <img src="images/Facebook-header.png" alt="" class="h-8 w-auto object-contain" />
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════════
+       MAIN FEED
+  ══════════════════════════════════════════ -->
+  <main class="max-w-[960px] mx-auto px-0 sm:px-4 py-4 space-y-3">
+
+    <!-- ── Facebook Post Card ── -->
+    <article class="bg-white rounded-none sm:rounded-xl shadow-sm max-w-[680px] mx-auto w-full">
+
+      <!-- Post Header (rounded top corners on the card) -->
+      <div class="flex items-center gap-3 px-4 pt-4 pb-3 rounded-t-xl">
+        <div class="relative shrink-0">
+          <img src="images/kevin-costner.png" alt="Kevin Costner"
+               class="w-11 h-11 rounded-full object-cover ring-2 ring-white shadow" />
+          <span class="absolute -bottom-0.5 -right-0.5 w-4 h-4 bg-fb-blue rounded-full border-2 border-white"></span>
+        </div>
+        <div class="flex-1 min-w-0">
+          <p class="font-semibold text-sm leading-tight text-fb-text">Kevin Costner</p>
+          <div class="flex items-center gap-1 mt-0.5">
+            <span class="text-xs text-fb-muted">28 minutes ago</span>
+            <span class="text-xs text-fb-muted">·</span>
+            <img src="images/planeta.png" alt="Public" class="w-3 h-3 opacity-60" />
+          </div>
+        </div>
+        <button class="p-2 rounded-full hover:bg-gray-100 transition-colors">
+          <img src="images/pontinhos.png" alt="Options" class="w-5 h-3 object-contain opacity-60" />
+        </button>
+      </div>
+
+      <!-- Post Text -->
+      <div class="px-4 pb-3 text-sm leading-relaxed text-fb-text">
+        <p>You probably have a pack of gelatin sitting in your kitchen right now — and don't even know what a 15-second ritual with it can do.<br>
+           Gary Brea just showed the homemade horse gelatin trick porn actors have been using in secret. Mel Gibson sat down and told everything. Watch it while it's still up.<br>
+           <strong class="font-semibold">But be warned — watch it alone.</strong> It contains explicit sexual content.</p>
+      </div>
+
+      <!-- VSL Player -->
+      <div class="w-full bg-black overflow-hidden">
+        <vturb-smartplayer id="vid-6aef879bbc640f7b91af2222" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 178.21782178217822% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer>
+        <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/141b8f7c-149b-49a7-802c-7ac5af1c8eb5/players/6aef879bbc640f7b91af2222/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
+      </div>
+
+      <!-- ── Post Stats ── -->
+      <div class="flex items-center justify-between px-4 py-2 border-t border-gray-100 mt-2">
+        <div class="flex items-center gap-1.5">
+          <img src="images/emoji.png" alt="Reactions" class="h-5 object-contain" />
+          <span class="text-sm text-fb-muted">710</span>
+        </div>
+        <div class="flex items-center gap-3 text-sm text-fb-muted">
+          <span>38 Comments</span>
+          <span>92 Shares</span>
+        </div>
+      </div>
+
+      <!-- Post Action Bar -->
+      <div class="flex items-center divide-x divide-gray-100 border-t border-gray-200 mx-1">
+        <button class="flex-1 flex items-center justify-center gap-2 py-2.5 text-fb-muted hover:bg-gray-50 transition-colors rounded-bl-xl font-semibold text-sm">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"/>
+          </svg>
+          Like
+        </button>
+        <button class="flex-1 flex items-center justify-center gap-2 py-2.5 text-fb-muted hover:bg-gray-50 transition-colors font-semibold text-sm">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+          </svg>
+          Comment
+        </button>
+        <button class="flex-1 flex items-center justify-center gap-2 py-2.5 text-fb-muted hover:bg-gray-50 transition-colors rounded-br-xl font-semibold text-sm">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/>
+          </svg>
+          Share
+        </button>
+      </div>
+
+    </article>
+
+    <!-- ══════════════════════════════════════════
+         BLOCOS OCULTOS — revelados pelo delay
+         (fora do article para usar largura total do main)
+    ══════════════════════════════════════════ -->
+    <div class="esconder">
+
+      <!-- Special Offer Banner -->
+      <div id="special-offer"
+           class="max-w-[680px] mx-auto px-2 mt-1 mb-2">
+        <div class="rounded-2xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-5 text-center shadow-xl border border-slate-700 relative overflow-hidden esconder-revealed">
+          <div class="absolute inset-0 bg-gradient-to-r from-brand-gold/10 via-transparent to-brand-gold/10 pointer-events-none"></div>
+
+          <div class="inline-flex items-center gap-1.5 bg-brand-red text-white text-xs font-bold px-4 py-1.5 rounded-full mb-4 shadow-lg">
+            <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            LIMITED TIME SPECIAL OFFER
+          </div>
+
+          <div class="mb-3">
+            <p id="spots-text" class="text-white text-sm font-semibold mb-2">
+              <span id="spots" class="text-brand-goldLight font-bold">1/10</span> spots claimed!
+            </p>
+            <div class="bg-slate-700 rounded-full h-3 max-w-xs mx-auto overflow-hidden shadow-inner">
+              <div id="progress-bar"
+                   class="h-full bg-gradient-to-r from-brand-green to-emerald-400 rounded-full transition-all duration-700 shadow-sm"
+                   style="width:10%"></div>
+            </div>
+          </div>
+
+          <h2 class="font-display text-xl sm:text-2xl font-extrabold text-white mb-1">
+            💥 Be One of the First 10 People! 💥
+          </h2>
+          <p class="text-slate-300 text-sm">
+            Complete the payment for the <span class="text-brand-goldLight font-bold">6-bottle</span> kit and receive your exclusive reward.
+          </p>
+        </div>
+      </div>
+
+      <!-- ── Offer Cards Grid ── -->
+      <div class="px-2 py-4">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 items-stretch">
+
+          <!-- ─── 2 BOTTLES — Basic ─── -->
+          <article class="bg-white rounded-2xl border border-gray-200 shadow-md overflow-hidden flex flex-col text-center hover:shadow-lg transition-shadow duration-300 h-full order-2 sm:order-1">
+            <div class="bg-slate-600 text-white text-xs font-bold tracking-widest py-2.5 px-4 uppercase">
+              Basic Offer
+            </div>
+            <div class="flex-1 flex flex-col p-5 gap-3">
+              <div>
+                <p class="font-display text-lg font-extrabold text-slate-800">2 BOTTLES</p>
+                <p class="text-xs text-slate-500 font-medium mt-0.5">60 DAY SUPPLY</p>
+              </div>
+              <div class="flex justify-center py-1">
+                <img src="images/Future Now - MaxVitalize - MOCKUP-2.png" alt="2 Bottles"
+                     class="h-36 object-contain drop-shadow-md" />
+              </div>
+              <div>
+                <p class="text-slate-400 text-xs line-through mb-0.5">$99 per bottle</p>
+                <div class="flex items-baseline justify-center gap-1">
+                  <span class="text-slate-600 text-lg font-bold">$</span>
+                  <span class="font-display text-5xl font-black text-slate-800">79</span>
+                  <span class="text-slate-500 text-xs font-semibold self-end mb-1">/ bottle</span>
+                </div>
+                <span class="inline-block bg-slate-100 text-slate-600 text-xs font-bold px-2 py-0.5 rounded-full mt-1">SAVE 20%</span>
+              </div>
+              <div class="space-y-0.5 border-t border-gray-100 pt-3">
+                <p class="text-sm font-semibold text-slate-600">Total: <strong class="text-slate-800 text-base">$158</strong></p>
+                <p class="text-amber-600 font-medium text-xs">+ $9.99 Shipping</p>
+              </div>
+              <a href="https://www.jvzoo.com/b/117459/445615/99?aid=3552257"
+                 class="offer-cta block mt-auto bg-slate-700 hover:bg-slate-800 text-white font-bold text-sm py-3 px-4 rounded-xl transition-colors duration-200 shadow">
+                BUY NOW
+              </a>
+              <img src="images/cards.png.webp" alt="Payment methods" class="h-5 object-contain mx-auto opacity-70" />
+            </div>
+          </article>
+
+          <!-- ─── 6 BOTTLES — Best Offer (DESTAQUE) ─── -->
+          <article class="bg-gradient-to-b from-slate-900 to-slate-800 rounded-2xl border-2 border-brand-gold shadow-2xl overflow-hidden flex flex-col text-center relative order-1 sm:order-2">
+            <div class="bg-gradient-to-r from-brand-gold via-brand-goldLight to-brand-gold py-3.5 px-4">
+              <p class="font-display text-slate-900 text-sm font-extrabold tracking-wider uppercase">
+                ⭐ BEST VALUE — MOST POPULAR ⭐
+              </p>
+            </div>
+            <div class="flex-1 flex flex-col p-5 gap-3">
+              <div>
+                <p class="font-display text-xl font-extrabold text-white">6 BOTTLES</p>
+                <p class="text-xs text-slate-400 font-medium mt-0.5">180 DAY SUPPLY</p>
+              </div>
+              <div class="flex justify-center py-1">
+                <img src="images/Future Now - MaxVitalize - MOCKUP-6.png" alt="6 Bottles"
+                     class="h-44 object-contain drop-shadow-2xl" />
+              </div>
+              <div class="inline-flex items-center gap-1 bg-brand-red text-white text-xs font-extrabold px-3 py-1 rounded-full mx-auto shadow-lg">
+                🔥 SAVE 50% — BEST DEAL
+              </div>
+              <div>
+                <p class="text-slate-400 text-xs line-through mb-0.5">$99 per bottle</p>
+                <div class="flex items-baseline justify-center gap-1">
+                  <span class="text-brand-goldLight text-xl font-bold">$</span>
+                  <span class="font-display text-5xl font-black text-white">49</span>
+                  <span class="text-slate-400 text-xs font-semibold self-end mb-1">/ bottle</span>
+                </div>
+              </div>
+              <div class="space-y-1.5">
+                <div class="flex items-center justify-center gap-1.5 bg-brand-green/20 text-brand-green rounded-lg py-1.5 text-xs font-bold">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  FREE SHIPPING
+                </div>
+                <div class="flex items-center justify-center gap-1.5 text-slate-300 text-xs">
+                  <svg class="w-3.5 h-3.5 text-brand-goldLight shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 1l1.884 5.801H18l-4.943 3.593 1.884 5.801L10 12.601l-4.94 3.594 1.883-5.801L2 6.801h6.116L10 1z" clip-rule="evenodd"/>
+                  </svg>
+                  60-Day Money-Back Guarantee
+                </div>
+              </div>
+              <div class="border-t border-slate-700 pt-3">
+                <span class="text-slate-300 text-sm font-semibold">Total: <strong class="text-white text-base">$294</strong></span>
+                <span class="block text-slate-500 line-through text-xs">was $594</span>
+              </div>
+              <a href="https://www.jvzoo.com/b/117459/445707/99?aid=3552257"
+                 class="offer-cta cta-pulse block mt-auto bg-gradient-to-r from-brand-green to-emerald-500 hover:from-emerald-500 hover:to-brand-green text-white font-extrabold text-base py-4 px-4 rounded-xl transition-all duration-200 shadow-xl tracking-wide">
+                ✅ YES! I WANT THIS DEAL
+              </a>
+              <img src="images/cards.png.webp" alt="Payment methods" class="h-5 object-contain mx-auto opacity-60" />
+            </div>
+          </article>
+
+          <!-- ─── 3 BOTTLES — Most Popular ─── -->
+          <article class="bg-white rounded-2xl border border-gray-200 shadow-md overflow-hidden flex flex-col text-center hover:shadow-lg transition-shadow duration-300 h-full order-3 sm:order-3">
+            <div class="bg-fb-blue text-white text-xs font-bold tracking-widest py-2.5 px-4 uppercase">
+              Most Popular
+            </div>
+            <div class="flex-1 flex flex-col p-5 gap-3">
+              <div>
+                <p class="font-display text-lg font-extrabold text-slate-800">3 BOTTLES</p>
+                <p class="text-xs text-slate-500 font-medium mt-0.5">90 DAY SUPPLY</p>
+              </div>
+              <div class="flex justify-center py-1">
+                <img src="images/Future Now - MaxVitalize - MOCKUP-3.png" alt="3 Bottles"
+                     class="h-36 object-contain drop-shadow-md" />
+              </div>
+              <div>
+                <p class="text-slate-400 text-xs line-through mb-0.5">$99 per bottle</p>
+                <div class="flex items-baseline justify-center gap-1">
+                  <span class="text-fb-blue text-lg font-bold">$</span>
+                  <span class="font-display text-5xl font-black text-slate-800">69</span>
+                  <span class="text-slate-500 text-xs font-semibold self-end mb-1">/ bottle</span>
+                </div>
+                <span class="inline-block bg-blue-50 text-fb-blue text-xs font-bold px-2 py-0.5 rounded-full mt-1">SAVE 30%</span>
+              </div>
+              <div class="space-y-0.5 border-t border-gray-100 pt-3">
+                <p class="text-sm font-semibold text-slate-600">Total: <strong class="text-slate-800 text-base">$207</strong></p>
+                <p class="text-brand-green font-medium text-xs">+ FREE Shipping</p>
+              </div>
+              <a href="https://www.jvzoo.com/b/117459/445705/99?aid=3552257"
+                 class="offer-cta block mt-auto bg-fb-blue hover:bg-blue-700 text-white font-bold text-sm py-3 px-4 rounded-xl transition-colors duration-200 shadow">
+                BUY NOW
+              </a>
+              <img src="images/cards.png.webp" alt="Payment methods" class="h-5 object-contain mx-auto opacity-70" />
+            </div>
+          </article>
+
+        </div><!-- /grid -->
+
+        <!-- Trust bar -->
+        <div class="mt-4 flex flex-wrap items-center justify-center gap-4 text-xs text-slate-500 font-medium">
+          <span class="flex items-center gap-1.5">
+            <svg class="w-4 h-4 text-brand-green" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+            Secure Checkout
+          </span>
+          <span class="flex items-center gap-1.5">
+            <svg class="w-4 h-4 text-brand-green" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+            </svg>
+            60-Day Guarantee
+          </span>
+          <span class="flex items-center gap-1.5">
+            <svg class="w-4 h-4 text-brand-green" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/>
+            </svg>
+            Free Shipping (6 bottles)
+          </span>
+          <span class="flex items-center gap-1.5">
+            <svg class="w-4 h-4 text-brand-green" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+            SSL Encrypted
+          </span>
+        </div>
+
+      </div><!-- /offer cards -->
+
+    </div><!-- /.esconder -->
+
+    <!-- ── Comments Section ── -->
+    <div class="bg-white rounded-none sm:rounded-xl shadow-sm px-4 py-4 max-w-[680px] mx-auto w-full">
+
+      <div class="flex items-center justify-between mb-3">
+        <p class="text-sm text-fb-muted font-medium">
+          Showing <span id="total_comentarios" class="font-semibold text-fb-text">6</span> comments
+        </p>
+        <button class="text-xs text-fb-blue font-semibold hover:underline">Most Relevant</button>
+      </div>
+
+      <div id="fb_comentarios" class="space-y-3">
+
+        <!-- Comment 1 -->
+        <div class="flex gap-2.5 items-start">
+          <img src="images/ft01.png" alt="Steven Pace"
+               class="w-9 h-9 rounded-full object-cover shrink-0 ring-1 ring-gray-200" />
+          <div class="flex-1 min-w-0">
+            <div class="bg-fb-bg rounded-2xl rounded-tl-sm px-3.5 py-2.5">
+              <p class="text-xs font-bold text-fb-text">Steven Pace</p>
+              <p class="text-sm text-fb-text mt-0.5 leading-snug">Wait… horse gelatin sitting in the kitchen can actually get you rock hard in a few minutes? Sounds insane. Has anyone tried what Gary Brea showed in this video?</p>
+            </div>
+            <div class="flex items-center gap-3 mt-1 px-2">
+              <button class="text-xs font-semibold text-fb-muted hover:text-fb-blue transition-colors">Like</button>
+              <button class="text-xs font-semibold text-fb-muted hover:text-fb-blue transition-colors">Reply</button>
+              <span class="text-xs text-fb-muted">2h</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Comment 2 -->
+        <div class="flex gap-2.5 items-start">
+          <img src="images/ft04.png" alt="Gordon Ordoyne"
+               class="w-9 h-9 rounded-full object-cover shrink-0 ring-1 ring-gray-200" />
+          <div class="flex-1 min-w-0">
+            <div class="bg-fb-bg rounded-2xl rounded-tl-sm px-3.5 py-2.5">
+              <p class="text-xs font-bold text-fb-text">Gordon Ordoyne</p>
+              <p class="text-sm text-fb-text mt-0.5 leading-snug">Steven, it's real. I'm 52 and spent years needing a pill just to get through the night. After this I stayed hard the whole time — spontaneous morning wood every day too. My wife keeps staring when I walk out of the shower.</p>
+            </div>
+            <div class="flex items-center gap-3 mt-1 px-2">
+              <button class="text-xs font-semibold text-fb-muted hover:text-fb-blue transition-colors">Like</button>
+              <button class="text-xs font-semibold text-fb-muted hover:text-fb-blue transition-colors">Reply</button>
+              <span class="text-xs text-fb-muted">1h</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Comment 3 -->
+        <div class="flex gap-2.5 items-start">
+          <img src="images/ft03.png" alt="Vern Moen"
+               class="w-9 h-9 rounded-full object-cover shrink-0 ring-1 ring-gray-200" />
+          <div class="flex-1 min-w-0">
+            <div class="bg-fb-bg rounded-2xl rounded-tl-sm px-3.5 py-2.5">
+              <p class="text-xs font-bold text-fb-text">Vern Moen</p>
+              <p class="text-sm text-fb-text mt-0.5 leading-snug">That part about PFAS locking onto type 3 collagen in the corpus cavernosum finally clicked. It was never age or “genetics.” Forever chemicals were turning the tissue into scar. Once that made sense, everything changed.</p>
+            </div>
+            <div class="flex items-center gap-3 mt-1 px-2">
+              <button class="text-xs font-semibold text-fb-muted hover:text-fb-blue transition-colors">Like</button>
+              <button class="text-xs font-semibold text-fb-muted hover:text-fb-blue transition-colors">Reply</button>
+              <span class="text-xs text-fb-muted">58m</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Comment 4 -->
+        <div class="flex gap-2.5 items-start">
+          <img src="images/ft02.png" alt="Rick Patterson"
+               class="w-9 h-9 rounded-full object-cover shrink-0 ring-1 ring-gray-200" />
+          <div class="flex-1 min-w-0">
+            <div class="bg-fb-bg rounded-2xl rounded-tl-sm px-3.5 py-2.5">
+              <p class="text-xs font-bold text-fb-text">Rick Patterson</p>
+              <p class="text-sm text-fb-text mt-0.5 leading-snug">Doctors told me the only options were Viagra or pumps. Total lie. Blue pills just force a fake erection — they never touch the fibrosis. And everyone online keeps saying 3 ingredients. Gary was clear: it's four. That last one is the whole difference.</p>
+            </div>
+            <div class="flex items-center gap-3 mt-1 px-2">
+              <button class="text-xs font-semibold text-fb-muted hover:text-fb-blue transition-colors">Like</button>
+              <button class="text-xs font-semibold text-fb-muted hover:text-fb-blue transition-colors">Reply</button>
+              <span class="text-xs text-fb-muted">45m</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Comment 5 -->
+        <div class="flex gap-2.5 items-start">
+          <img src="images/ft06.png" alt="Philip Braswell"
+               class="w-9 h-9 rounded-full object-cover shrink-0 ring-1 ring-gray-200" />
+          <div class="flex-1 min-w-0">
+            <div class="bg-fb-bg rounded-2xl rounded-tl-sm px-3.5 py-2.5">
+              <p class="text-xs font-bold text-fb-text">Philip Braswell</p>
+              <p class="text-sm text-fb-text mt-0.5 leading-snug">Mel's story hit hard — 58 years old, Rosalind pulling away, that night the pill failed him completely. Pfizer makes billions keeping guys dependent. A real fix kills their business. Shared this with every guy I know.</p>
+            </div>
+            <div class="flex items-center gap-3 mt-1 px-2">
+              <button class="text-xs font-semibold text-fb-muted hover:text-fb-blue transition-colors">Like</button>
+              <button class="text-xs font-semibold text-fb-muted hover:text-fb-blue transition-colors">Reply</button>
+              <span class="text-xs text-fb-muted">30m</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Comment 6 -->
+        <div class="flex gap-2.5 items-start">
+          <img src="images/ft05.png" alt="Gary Welch"
+               class="w-9 h-9 rounded-full object-cover shrink-0 ring-1 ring-gray-200" />
+          <div class="flex-1 min-w-0">
+            <div class="bg-fb-bg rounded-2xl rounded-tl-sm px-3.5 py-2.5">
+              <p class="text-xs font-bold text-fb-text">Gary Welch</p>
+              <p class="text-sm text-fb-text mt-0.5 leading-snug">Tried pills, TRT, even those vacuum pumps — nothing lasted. After watching this I finally understood why. 58 now, thicker even when soft, lasting hours. My wife says she can't keep up. She keeps asking what got into me.</p>
+            </div>
+            <div class="flex items-center gap-3 mt-1 px-2">
+              <button class="text-xs font-semibold text-fb-muted hover:text-fb-blue transition-colors">Like</button>
+              <button class="text-xs font-semibold text-fb-muted hover:text-fb-blue transition-colors">Reply</button>
+              <span class="text-xs text-fb-muted">12m</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /#fb_comentarios -->
+
+      <!-- Comment input -->
+      <div class="flex items-center gap-2.5 mt-4 pt-3 border-t border-gray-100">
+        <div class="w-9 h-9 rounded-full bg-gradient-to-br from-slate-300 to-slate-400 shrink-0"></div>
+        <div class="flex-1 bg-fb-bg rounded-full px-4 py-2.5 text-sm text-fb-muted cursor-pointer hover:bg-gray-200 transition-colors select-none">
+          Write a comment…
+        </div>
+      </div>
+
+    </div><!-- /comments section -->
+
+    <!-- Spacer bottom -->
+    <div class="h-8"></div>
+
+  </main>
+
+  <!-- ── Site footer (sempre visível) ── -->
+  <footer class="bg-slate-900 text-slate-300 mt-8">
+    <div class="max-w-[680px] mx-auto px-4 py-8 text-center">
+      <nav class="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm font-medium">
+        <a href="refund-policy.html" class="hover:text-white transition-colors">Refund Policy</a>
+        <a href="shipping.html" class="hover:text-white transition-colors">Shipping</a>
+        <a href="contact.html" class="hover:text-white transition-colors">Contact / Support</a>
+        <a href="terms.html" class="hover:text-white transition-colors">Terms of Use</a>
+        <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+      </nav>
+      <p class="mt-5 text-xs text-slate-400 leading-relaxed">
+        Support: <a href="mailto:support@northsupplements.online" class="underline hover:text-white">support@northsupplements.online</a>
+        · <a href="tel:+18886723606" class="underline hover:text-white">+1 888 672 3606</a>
+        · 285 Northeast Ave, Tallmadge, OH 44278, USA
+      </p>
+      <p class="mt-3 text-xs text-slate-500 leading-relaxed">
+        60-Day Money-Back Guarantee. JVZoo (BBC Systems Inc.) is the retailer for products featured on this site.
+      </p>
+      <p class="mt-3 text-[11px] text-slate-500 leading-relaxed">
+        These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease.
+        This site is not affiliated with or endorsed by any social media platform or public figure.
+      </p>
+      <p class="mt-3 text-[11px] text-slate-600">© 2026 Horse Peak Gelatin. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════════════════
+       SCRIPTS
+  ══════════════════════════════════════════ -->
+
+  <!-- app.js: special offer notifications & progress bar -->
+  <script src="assets/js/app.js" defer></script>
+
+  <!-- Delay — inline obrigatório: revela os potes após delaySeconds -->
+  <style>.esconder { display: none; }</style>
+  <script>
+    var delaySeconds = 3283;
+    var player = document.querySelector("vturb-smartplayer");
+    player.addEventListener("player:ready", function() {
+      player.displayHiddenElements(delaySeconds, [".esconder"], {
+        persist: true
+      });
+    });
+  </script>
+
+  <!-- URL params → CTAs (mantido intacto) -->
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+
+    function appendParamsToLinks() {
+      document.querySelectorAll(".offer-cta").forEach(function(linkElement) {
+        if (!(linkElement instanceof HTMLAnchorElement)) return;
+        if (linkElement.dataset.paramsApplied) return;
+        if (!linkElement.getAttribute("href") || linkElement.getAttribute("href") === "#") return;
+
+        var urlFormatada = new URL(linkElement.href);
+        urlParams.forEach(function(valor, chave) {
+          urlFormatada.searchParams.set(chave, valor);
+        });
+
+        var tidValor = urlParams.get('tid');
+        if (tidValor) {
+          urlFormatada.searchParams.set('aff_sub1', tidValor);
+        }
+
+        linkElement.href = urlFormatada.toString();
+        linkElement.dataset.paramsApplied = 'true';
+      });
+    }
+
+    var observer = new MutationObserver(appendParamsToLinks);
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    document.addEventListener('DOMContentLoaded', appendParamsToLinks);
+  </script>
+
+</body>
+</html>
