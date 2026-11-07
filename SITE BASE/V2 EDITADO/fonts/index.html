@@ -13,6 +13,36 @@
   </script>
   <!-- End AppLovin Axon Pixel -->
 
+  <!-- AppLovin Axon — eventos de TESTE/validacao: SO disparam com ?axon_test=1 na URL.
+       Nunca disparam para visitantes normais. Usado apenas para validar o pixel no painel. -->
+  <script>
+    (function () {
+      try {
+        if (new URLSearchParams(window.location.search).get("axon_test") !== "1") return;
+        if (typeof axon !== "function") return;
+        var items = [{
+          item_id: "maxvitalize-6",
+          item_name: "MaxVitalize - 6 Bottles",
+          item_category_id: 1,
+          price: 49,
+          quantity: 6
+        }];
+        axon("track", "view_item",      { currency: "USD", value: 294, items: items });
+        axon("track", "add_to_cart",    { currency: "USD", value: 294, items: items });
+        axon("track", "begin_checkout", { currency: "USD", value: 294, items: items });
+        axon("track", "purchase", {
+          currency: "USD",
+          value: 294,
+          shipping: 0,
+          tax: 0,
+          transaction_id: "TEST-" + Date.now(),
+          items: items,
+          user_data: { email: "teste@exemplo.com" }
+        });
+      } catch (e) {}
+    })();
+  </script>
+
   <title>Facebook - Kevin Costner</title>
   <link rel="icon" href="images/5610944-150x150.png" sizes="32x32" />
   <link rel="icon" href="images/5610944-300x300.png" sizes="192x192" />
